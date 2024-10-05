@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/* Remove the .one-step-back class from HTML elements */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes glowAnimation {
+  from {
+    filter: drop-shadow(0 0 5px rgba(253, 29, 29, 0.7));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(22, 40, 198, 0.7));
+  }
+}
+@keyframes labelPulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Custom select styling */
+/* Animation for options */
+@keyframes optionPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Rainbow border animation for options */
+@keyframes rainbow {
+  0% {
+    border-color: #ff0000;
+  }
+  16.666% {
+    border-color: #ff8000;
+  }
+  33.333% {
+    border-color: #ffff00;
+  }
+  50% {
+    border-color: #00ff00;
+  }
+  66.666% {
+    border-color: #0000ff;
+  }
+  83.333% {
+    border-color: #8000ff;
+  }
+  100% {
+    border-color: #ff0000;
+  }
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(90deg, rgb(253, 29, 29) 0%, rgb(22, 40, 198) 100%);
+}
+
+#container {
+  width: 50vw;
+  height: 40vh;
+  margin: 20rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn1 {
+  background-color: #fd1d1d;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 28%;
+  margin: 1.5rem;
+  color: #fff;
+  position: relative;
+}
+.btn1:hover {
+  opacity: 1;
+}
+.btn1:active {
+  top: 4px;
+  box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
+}
+
+.btn2 {
+  background-color: #1628c6;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 28%;
+  margin: 1.5rem;
+  color: #fff;
+  position: relative;
+}
+.btn2:hover {
+  opacity: 1;
+}
+.btn2:active {
+  top: 4px;
+  box-shadow: #c0392b 0px 3px 2px, #000 0px 3px 5px;
+}
+
+h2 {
+  color: #fff;
+}
+
+.copycode {
+  color: #000;
+  font-weight: 800;
+  background-color: rgba(189, 189, 189, 0.1);
+  border-left: 0.5rem solid #fff;
+  border-radius: 5%;
+  width: 50%;
+  font-size: 2rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  padding: 30px 0;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2), 5px 5px 0px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #fd1d1d, #fc8d3d, #1628c6);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientAnimation 5s ease infinite, glowAnimation 2s ease-in-out infinite alternate;
+}
+
+.options {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  animation: rainbow 10s linear infinite;
+}
+.options:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+}
+.options label {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-right: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: labelPulse 2s infinite alternate;
+}
+.options select {
+  padding: 10px 15px;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  padding-right: 30px;
+}
+.options select:hover {
+  background: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+.options select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+.options select option {
+  padding: 10px;
+  transition: all 0.3s ease;
+  animation: optionPulse 2s infinite;
+}
+.options select option::before {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+.options select option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.options select option:nth-child(1) {
+  animation-delay: 0s;
+}
+.options select option:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.options select option:nth-child(3) {
+  animation-delay: 1s;
+}
+.options select option.ltr {
+  background-color: #ff9a9e;
+  color: #333;
+}
+.options select option.ltr::before {
+  content: "➡️";
+}
+.options select option.ttb {
+  background-color: #a18cd1;
+  color: #fff;
+}
+.options select option.ttb::before {
+  content: "⬇️";
+}
+.options select option.diagonal {
+  background-color: #fad0c4;
+  color: #333;
+}
+.options select option.diagonal::before {
+  content: "↘️";
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+footer p {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.color-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.random-colors {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 28px;
+  margin: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.random-colors:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+.random-colors:active {
+  transform: translateY(1px);
+}
+
+.copy-button {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 2rem 4rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.8rem;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+.copy-button:hover {
+  background-color: #ff8787;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+.copy-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.2);
+}
+.copy-button::before {
+  content: "Copy";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.copy-button::after {
+  content: "Copied!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.copy-button.copied::before {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.copy-button.copied::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copied-text {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 10px 31px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.copied-text.show {
+  animation: copied 1.5s ease-in-out;
+}
+
+@media (max-width: 993px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 769px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 577px) {
+  html {
+    font-size: 50%;
+  }
+  .copycode {
+    width: 60%;
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 577px) {
+  .copy-button {
+    font-size: 1.6rem;
+    padding: 10px 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

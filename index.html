@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient-Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gradient Generator</h1>
+      </header>
+      
+      <main id="container">
+        <div class="color-buttons">
+          <button class="btn1">#fd1d1d</button>
+          <button class="btn2">#1628c6</button>  
+          <p class="random-colors">Random Colors</p>
+        </div>
+        
+        <div class="gradient-preview"></div>
+        
+        <h2>Copy The Code Below 👇</h2>
+        <div class="copycode">
+          background: linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(22,40,198,1) 100%);
+        </div>
+        <button class="copy-button"></button>
+        
+        <div class="options">
+          <label for="direction">Gradient Direction:</label>
+          <select id="direction">
+            <option class="ltr" value="to right">Left to Right</option>
+            <option class="ttb" value="to bottom">Top to Bottom</option>
+            <option class="diagonal" value="to bottom right">Diagonal</option>
+          </select>
+        </div>
+      </main>
+      
+      <footer>
+        <p>&copy; 2023 Gradient Generator. All rights reserved.</p>
+      </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
